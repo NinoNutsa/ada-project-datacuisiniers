@@ -1,19 +1,26 @@
 ---
 layout: page
-title: The Recipe For An Actor's Success 🎬
-subtitle: Analysis of various factors that lead to high box office revenue
+title: How to quantify the actor’s success? 🏆
+subtitle: Diving into the determinants of movie stars’ accomplishments
 cover-img: /assets/img/movie.png
 thumbnail-img: /assets/img/movie.png
 share-img: /assets/img/movie.png
 use-site-title: true
 ---
 
-The global film industry is a **$100 billion worth industry**. There is a vast potential to earn money, and the producers are willing to sacrifice considerable costs to become a movie success. Pirates of the Caribbean: On Stranger Tides, the most expensive film, cost $379 million. With such an amount at your disposal, you may wonder how you should spend the money. Should you use them to get one of the biggest movie stars in your cast? For many, this may be tempting. One of the most famous actors, Tom Cruise, was rewarded $100,000,000 for his performance in Top Gun: Maverick. But was it worth it? Or could the money be better spent? 
+In the movie industry, the journey to stardom is as varied as the stories on screen. Many dream of becoming actors, but what characterizes their success is still a mystery. This data story explores the details of an actor's success using the CMU Movie Summary Corpus dataset. We want to quantify success along several metrics such as awards, money, ratings, popularity, or longevity for actors. Our aim is to measure and understand the various aspects of personal success in the film industry.
 
-## Introduction
-Welcome to our interactive data story on the factors that influence box office success! We'll be exploring a range of questions about what drives a movie's financial performance. From analyzing the impact of release dates and the makeup of a film's cast, to examining the role of plot themes and movie length, we'll dive into the data to uncover the secrets of box office success.
+Quantifying an actor’s success is a challenge considering the various ways it can be measured. Peer recognition, box office earnings, positive reviews, and long careers are just a few of the dimensions that contribute to an actor's accomplishment. As we navigate through the CMU dataset, we acknowledge the inherent subjectivity in evaluating success and the diverse goals that actors may pursue.
 
-So grab your popcorn and join us as we explore the data and see what insights we can uncover. And don't forget to try out the interactive visualizations – you can play around with the data and see what factors have the biggest impact on a movie's success. Let's get started!
+To shed light on the diverse factors influencing an actor's journey, we articulate several research questions:
+* What are the different ways to be successful and are they correlated?
+* What drives these different dimensions of success?
+* How much do personal characteristics matter (age, gender, height, etc)?
+* How much do movie characteristics matter (genre, country, etc)?
+* Do actors achieve success by making thoughtful decisions regarding their careers, such as diversifying the countries or languages to work in, or by strategically choosing the genres or personas they portray in movies?
+
+Join us on this exciting journey through data as we unravel the secrets behind an actor's ascent to stardom, offering a unique perspective on the intricate tapestry of success in the world of cinema!
+
 
 -----------------
 
