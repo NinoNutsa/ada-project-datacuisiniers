@@ -15,116 +15,73 @@ Quantifying an actor’s success is a challenge considering the various ways it 
 To shed light on the diverse factors influencing an actor's journey, we articulate several research questions:
 * What are the different ways to be successful and are they correlated?
 * What drives these different dimensions of success?
-* How much do personal characteristics matter (age, gender, height, etc)?
+* How much do personal characteristics matter (age, gender, etc)?
 * How much do movie characteristics matter (genre, country, etc)?
 * Do actors achieve success by making thoughtful decisions regarding their careers, such as diversifying the countries or languages to work in, or by strategically choosing the genres or personas they portray in movies?
 
 Join us on this exciting journey through data as we unravel the secrets behind an actor's ascent to stardom, offering a unique perspective on the intricate tapestry of success in the world of cinema!
 
-
 -----------------
 
-## When to strike gold: the perfect release date for your movie
+## Part 1 ??
 
-To begin with, we aim to investigate the influence of a movie's release date on its box office revenue. Since our goal is to create a recipe for successfull movies in the future, we will focus on determining the best time of a year to release a movie by comparing the mean revenue of the different months. But with data spanning multiple decades, we knew we had to account for inflation to get an accurate picture. So let's dive in and see what the data reveals about the perfect release date for a blockbuster movie.
-
-#### Inflation-Adjusted Box Office Revenue: Can Older Movies Compete?
-
-Our analysis shows that there is a clear need to adjust for inflation when looking at the correlation between release year and revenue. In fact, the Spearman Correlation Coefficient of 0.01 and p-value of 0.4 reveal that there is little to no correlation between the two variables after correcting for inflation. But don't worry, we're not done yet! Next, we'll delve into the specific months of the year and see if there are any standout performers in terms of revenue. Stay tuned!
+#### Exemple insertion plot (ne pas effacer) 
 
 <iframe src="assets/plot/inflation-plot.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-#### What's the Best Month to Release a Movie? 
-
-We dive into the data to discover if certain months are more likely to lead to blockbuster hits. By analyzing the correlation between the month of release and revenue, we find that most months have statistically significant differences in mean revenue. In particular, June emerges as the clear winner with the highest mean and lowest p-value when performing a One-way ANOVA test. But is June the best month for all genres? We take a closer look at the top ten most common genres and find that the most promising month varies for each. Get ready to mark your calendars and plan for box office success!
-
-
-<iframe src="assets/plot/genre-plot-sm.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
-
-Now let's delve into the specific release months that tend to bring in the most revenue for each genre. Adventure and action movies tend to perform best in May, while crime fiction, comedy, drama, romantic comedy, and thriller films see their highest mean revenues in June. On the other hand, romance films tend to perform best in November, and indie films see their highest mean revenues in December. It's clear that the best month for a movie's release depends on its genre, so it's crucial to consider this factor when deciding on a release date. 
-
 -----------------------
 
-## Spice Up Your Movie Recipe: The Importance of Diversity
+## What metrics whould we define ? 
 
-To analyze the effect diversity has on movie box office revenue, we first had to estimate the diversity of each movie. There are several ways to assess the diversity in a film which may lead to different results than we will present. The first thing we had to do was to figure out a way to estimate diversity based on our data. We decided to use ethnicity and gender as the estimates for the diversity of each movie. These two aspects will give a partial picture of diversity's effect on a movie's success. The next step was to give each film a “score of ethnicity” and a “score of gender.” We observed a high correlation between the number of actors in a film and the movie's box office revenue. It was, therefore, essential to find a score that considered the number of actors. To estimate ethnicity, we introduced the “ethnicity score,” which counts the number of ethnicities present in a movie and divides it by the total number of actors. We also considered different approaches, such as giving higher weight to rare ethnicities, but concluded that our approach would suffice for our analysis, which is to look at the effect of diversity on revenue and not to get a complete insight into the diversity in each movie. To estimate gender, we introduced the “fraction of females,” computed by counting the number of female actors and dividing it by the total number of actors in that film.
+When considering the success of an actor, it is clear that 
+
+### Revenue score
+
+### Longevity score
+
+#### Frequency of appearance
+
+The first analysis we will focus on is the frequency of appearances in movies per year. In fact, one can interpret a presence in serveral movies in a short period of time as a success factor. The main focus here is to consider frequencies at different periods, different gender and different regions in the world.
+
+In order to avoid to give too much importance to actors who appeared a lot during one year, we could focus on the mean frequency, which discriminates actors that once played in a lot of movies and then appeared way less, and this is a way to measure an entire career factor.  We filtered all the years before 1908 which seems not very insightful, and then plot the average frequency per year with the standard deviation for both genders and different regions of the world.
 
 
-### Ethnicity
-
-#### The Evolution of Ethnicity
-
-The ethnicity score in movies has increased in recent years, but less than ten movies are released yearly with an ethnicity score above 0.5 (after 1986). When we adjust the threshold for the ethnicity score, we observe a clear increasing trend from zero to the point of 0.7. Increasing the threshold above 0.5 gives a more unreliable result, as the more significant 95% CI indicates. The reason is likely because of the low number of movies, which provides each film with a more substantial impact on the mean revenue. Another possible explanation is that these movies first occur in recent years, and the audience has yet to decide whether this ethnicity score increases their movie experience.
-
-
+//Plots frequency
 <iframe src="assets/plot/distribution_ethnicity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-#### The Sweet Spot
+It's evident that during the 1910s, the United States produced a majority of male actors, particularly known for their frequent appearances in numerous movies within a single year. However, when considering mean frequency, women from the same period also displayed high participation at that time. The context of the 1910s is crucial because during this period produced more short-movie, that demanded less effort compared to now-a-days movies. Additionally, the limited pool of available actors resulted in recurring roles for figures like Roscoe Arbuckle, Charlie Chaplin, Oliver Hardy for males, and Charlotte Burton and Louise Lester for females.
 
-We grouped our data into five based on their ethnicity score to find the best ethnicity score interval, or as we like to call it, **The Sweet Spot**. In the search for the best interval, we found an ethnicity score between (0.6 – 0.8] to be the most lucrative considering revenue maximization when we look at the mean revenue in our data set. However, overlapping 95% CI between (0.2 – 0.8] prevents us from concluding which interval is the best. On the other side, we observe that the extreme cases of ethnicity score between (0  – 0.2] and (0.8  – 1] perform poorly, telling us that ethnicity score is something you should consider planning your next movie. You better stay between (0.2 – 0.8) if you aim to become rich **$** Further, the uncertainty associated with the revenue estimate for the interval (0.6 – 0.8] is worth noticing. Even though this interval resulted in the highest revenue in our data set, there is no guarantee that this will apply in general. This interval is for the gambler; if you do not have the guts to take a loss, you better stay in (0.4 – 0.6]!
+We can see that even if the mean frequency remains constant over time (with a peak in the 1910s in the US as seen before) and that there are not a lot of differences between men and women, considering the datas over time highlights different trends over time, like  the emergence of Asian movie since the 1970 which corresponds to [Bollywood golden era](https://www.nfi.edu/what-is-bollywood/#:~:text=Bollywood%2C%20often%20known%20as%20the,around%201000%20films%20every%20year.).
 
+This highlights the significance of considering the production period of movies in our assessment, showcasing the distinctive conditions and factors influencing actors' involvement and industry dynamics during that time.
 
-<iframe src="assets/plot/revenue_ethnicity_bar.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+#### Career span
 
-#### Time to Enter the Movie Market?
+While some actors gain fame by appearing in numerous movies within a short timeframe, others achieve recognition due to their everlasting careers. Our focus now is to examine the career spans of each actor, taking into account their first and last appearances in the provided dataset.
 
-A good investor never solely depends on historical data; they try to predict the future! We looked at how the ethnicity score market has changed in recent years, using this to predict the future journey. Since the primary goal of this analysis is to make a recipe for a movie´s success, we looked at recent movies, starting with films after the year 2000. We observed that the treated group (the group with an ethnicity score above the given threshold) tends to lie above the control group (the group with an ethnicity score below or equal to the given threshold). Still, we cannot find a statistically significant difference between the two groups. Maybe it is best to wait for this one out. However, the time in the market beats the timing, so if you love movies as much as we do, you should not take this as a discouragement to invest.
+Our analysis will delve into regional and gender differences, with a look at mid-career age (where available) to assess whether commencing a career at a young age holds significance in an actor's trajectory.
 
+//Plots span
 
-<iframe src="assets/plot/revenue_ethnicity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+The analysis reveals that actors in South America and Europe tend to have a higher mid-career age compared to those in other regions, while those in Asia and Oceania exhibit a lower mid-career age. Although the dataset for Africa is limited, it suggests a trend toward shorter career spans, whereas the distribution in other regions appears more varied and diverse
 
-#### Paired Matching  – The Classic
+#### Number of movies
 
-Our analysis so far has been naïve, not considering that many confounders may affect the revenue. To try to isolate ethnicity's effect on revenue, we have performed a paired matching. By completing the paired matching, we try to compare movies with similar probability of receiving the treatment, which in our case is an ethnicity score above 0.5. We used logistic regression to compute the propensity score based on the movie runtime, the year the movie was released, the number of languages present, and the number of countries the film was shown. With a threshold of 0.5 on the ethnicity score, we did not find any statistically significant difference between the two groups. Was all this reading just a waste of time? Not so fast!
+Finally, despite the insights we got from the combined analyses of frequency and career span, it's crucial to consider the total number of movies an actor has made throughout their career. This step is essential due to potential missing values in the initial dataset and the impact that career breaks might have on reducing the mean frequency.
 
+This forthcoming analysis will specifically concentrate on the density of movies produced, by gender and region. By examining movie density across these parameters, we aim to gain a more comprehensive understanding on the measuring of success.
 
+//Plots nbmv
 
-<iframe src="assets/plot/mean_difference_ethnicity_1.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+There are noticeable disparities between males and females in terms of the number of movies made (we applied a threshold to the male dataset for a clearer plot), with males generally being more numerous and having a higher overall number of movies. However, despite these differences, both genders exhibit a similar distribution pattern in terms of movie density. It is also crucial to highlight that the 'V' gaps in the plot result from missing values at specific movie counts — there are no actors with that exact number of movies.
 
-#### Paired Matching – The Experienced
+Finally, the longevity score consists of a balanced combination between these 3 components. 
 
-If it were as easy as just using paired matching with a threshold of 0.5, everyone would have been movie millionaires. To further analyze the results, we adjusted the threshold from 0.5 to 0.33. This adjustment discovered that movies with ethnicity scores above 0.33 achieve significantly better revenue than movies with ethnicity scores below or equal to 0.33.
+### Ratings
 
+### Awards
 
-<iframe src="assets/plot/mean_difference_ethnicity_2.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
-
-### Gender
-
-#### The Evolution of Gender
-
-We observed an increase in the fraction of females over time. However, a high fraction of females tends to generate lower revenue, except for a peak in revenue at 0.7. It is also essential to notice the uncertainty associated with the mean estimate. The uncertainty is high in the interval between 0.5 – 0.7, which indicates that more data may be needed to conclude. Movies with a threshold above 0.5 did not have above ten releases until 1990, and the poor revenue might be caused because it takes time for the audience to digest this change. 
-
-
-<iframe src="assets/plot/distribution_gender.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
-
-#### What is the Best Fraction of Females?
-
-To obtain better insight into a movie's best fraction of females, we divided the film into five groups based on their female fractions. We observe that the worst performing interval is the fraction of females between (0.8 – 1]. In comparison, the movies with a fraction of males between (0.8 – 1] perform well and have the highest mean in our data set. There may be several reasons for this, for example, that the most attractive genre may be better suited for male actors. We will try to isolate the effect of fractions of females in the paired matching later in this analysis, but for now, we will stick to our naïve approach. The most crucial intel for now is to avoid a fraction of females between (0.8 – 1] in your movie. It is more challenging to select the best interval, as the groups (0 – 0.2] and (0.2 – 0.4] have 95% CI that overlaps. 
-
-
-<iframe src="assets/plot/revenue_female_bar.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
-
-#### Buy the Dip?
-
-Our result has shown that movies with a high fraction of females perform poorly, but is this about to change? This analysis aims to find the best fraction of females if you were supposed to release a movie today. To do so, we will investigate the effect over time and look at the trend after 2000. We find that the control group's mean revenue lies above the treated group's for all the considered thresholds. But much overlap between the 95 % CI prevents us from concluding. We do not find any signals in the market indicating that movies with a high fraction of females will start to perform better. But the difference is insignificant, so minor changes may give better results.
-
-<iframe src="assets/plot/revenue_gender.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
-
-#### Paired Matching – The Classic
-
-As mentioned earlier, several factors may affect the movie revenue, and there is no guarantee that our findings are genuinely caused by the fraction of females in the movie. To try to isolate gender's effect on revenue, we have performed a paired matching to compare movies with similar probability of receiving the treatment, which is a fraction of females above 0.5. We used logistic regression to compute the propensity score based on the movie runtime, the year the movie was released, the number of languages present, and the number of countries the film was shown. Using the threshold of 0.5 on the fraction of females, we discovered that movies with a fraction of females below 0.5 achieve statistically significantly better revenue.
-
-
-<iframe src="assets/plot/mean_difference_female_1.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
-
-#### Paired Matching – The Experienced
-
-To further analyze the results, we adjusted the threshold from 0.5 to 0.33. This adjustment increased the mean difference between the treated and control group even further.
-
-
-<iframe src="assets/plot/mean_difference_female_2.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
-
-
+### Trends
 -----------------------
 
 ## Star Power: The Influence of Cast on Movie Revenue
