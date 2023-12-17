@@ -36,6 +36,35 @@ Join us on this exciting journey through data as we unravel the secrets behind a
 When considering the success of an actor, it is clear that 
 
 ### Revenue score
+When considering the success of an actor, it is clear that revenues matters. A high salary earned from participating in a movie is not just a financial achievement, it serves as a validation of an actor's performance. It is a proof of the industry's recognition, affirming the quality of their work and its appreciation for it.
+
+Nevertheless, information regarding the personal income earned by actors for their roles in movies is unavailable. Our dataset only comprises movie box office revenues. 
+
+Cumulated revenues from movies then act as a proxy for the cumulated revenues of actors but are an imperfect substitute.
+Someone can play an unimportant role in many high revenues movies but it doesn't mean that they are getting a lot of income from it. Moreover, the causal relation between the presence of an actor in a movie and the money the movie generated is unclear. Some actors may specifically seek to play in movies that they know are going to be big (because of the people involved, the budget, …) while other have a direct influence on the movie’s profitability by participating. We do not establish any claim on this but simply acknowledge that an actor being associated with many profitable movies is an indicator of success.
+
+In the film industry, box office revenues directly reflect the popularity and commercial success of a movie. Actors who consistently contribute to high-grossing films are often perceived as valuable assets in the industry, and in turn, successful.
+
+Cumulated revenues follow a power law, as some relatively small share of actors are involved in movies with huge profits.
+
+[distribution des cumulative revenus (log?)]
+
+We associate this amount to characteristics that are fixed over an actor's career, including their gender and the number of movies, languages, or movie genre they played in. The persona variable, added in a previous part of this project, adds information on the number of role types the actor played. It is a good proxy for how diversified one’s acting performances is. 
+
+Performing a regression, we find that all variables are statistically significant at the 5% level.
+Diversification appears to yield positive outcomes, as engaging in diverse languages, genres, and personas correlates with increased revenues. Gender also has a significant impact on revenues, with male actors experiencing a 0.91 higher revenues relative to the median compared to actresses.
+Quite conter-intuitively, playing in one more movie in a career is associated with lower revenues. This might be explained by the fact that big actors play only in selected movies whether those with smaller roles have to play in many small movies to sustain themselves. The many movies they play in is still not enough to gain as much money as big movie stars.
+Additionally, revenues experience a decline when actors engage in projects across more countries, as the coefficient on the number of unique countries one’s movies where from is negative. It suggests potential benefits from concentrating efforts within a single movie industry.
+The R-square value is neither very low nor high, indicating that the considered variables are sufficient to explain only a portion of the variations in actors' cumulative revenues.
+
+For the outcome, we do not consider different living standards across countries. We already have revenues in USD. However, we want to normalize the revenues per year to account for economic boosts and booms that might explain some yearly variation in revenues. Hence we compare the revenues of a movie with respect to the revenues of the median movie that year.
+As expected, the median revenues of movies have increased with time, hence the relevance of normalizing our data.
+
+[median revenues of movies over years]
+
+We obtain a score between 0 and 10 directly linked to cumulated movie revenues.
+
+[distribution of scores]
 
 ### Longevity score
 
@@ -80,8 +109,48 @@ Finally, the longevity score consists of a balanced combination between these 3 
 ### Ratings
 
 ### Awards
+Awards are also a good metric for success as it accounts for audience or peer recognition. in particular, the Oscars are famous and prestigious awards and prices are decided by industry specialists.
+
+Note that the Oscars take place in the US and are usually political. It is less likely for popular foreign actors to win an award outside the best international film category, even if some film industries are very big outside of Hollywood, such as Bollywood and Nollywood.
+We haven't found an exhaustive dataset of awards. For more exhaustivity, we could have extended the analysis to more award ceremonies but none are exempt from this national preference: The Australian Film Institute Awards, The BAFTA Film Awards (UK), the Césars Film Awards (France), the Golden Bears (Germany), the Golden Globes (US), the Golden Lions (Venice), the Palme d'Or awards (France), the Sundance Film Festival awards (independent movies), Filmfare (Hindi), etc. It is important to understand that we have here a dataset in favor of US actors and that the Oscar score for other nationalities does not accurately represent their award winning ability. Someone can be very successful in that sense in another country.
+
+[Oscar awards by countries]
+
+Conducting a random forest classification, we predict Oscar nominations or awards for actors based on specific performances in individual films. Eligibility spans the previous calendar year, so we consider features associated with a particular movie and year, excluding irrelevant factors like post-Oscar characteristics. AWe isolate key variables for prediction, including actor's age on movie release date, gender, ethnicity, height (as a proxy for physique), movie language, country, genre, runtime, and persona (type of role played based on the previous analysis).
+
+Note that we have a very imbalanced dataset because most people have no Oscar nor nomination. It is hard to predict Oscars accurately given the information we have. This, as well as lack of personal data makes the classification task complex.
+
+[features importance]
+
+We obtain that In both analyses, the most important feature is the actor's age when the movie is released, closely followed by the movie runtime. On the other side of the spectrum, gender does not seem to explain much of Oscars' winning. It makes sense that gender since both men and women win as many Oscars and are not competing. Overall, it seems like both movie and actor characteristics are important to predict the nomination and award of Oscars.
+We do not have mapping of ethnicity so even though we know this feature matters, we cannot really explain how. 
+
+Finally, we want to create a score between 0 and 10 based on the probability of being nominated or winning an Oscar for a given movie and actor. To do so, we compute a weighted sum of the probabilities to have nothing, get a nomination, or get an award given by our model. Then, we simply sum up the scores by actor to obtain a score representative of getting an Oscar over their entire career. 
+
+[distribution of scores]
 
 ### Trends
+-----------------------
+## Combining our success scores
+Our goal is to offer a more nuanced understanding on the determinants of success. By combining diverse metrics, we strive for a more exhaustive examination given the limitations in each isolated measure. Using several score measures complementarily is key to go past potential biases and picture a more representative concept of success. Additionally, we want to investigate the correlation between various notions of success. For instance, do the actors successful at having a long career also have good ratings?
+
+[pairplot]
+[correlations]
+
+The pairwise correlations between success scores is not high, ranging from 0.08 to 0.38, but are always positive. Trends and Oscars exhibit the strongest correlations, which can be explained by the spotlight getting an Oscar nomination or award give to an actor, leading to more Google searches. Rating and trends have the weakest correlation, suggesting that trending is not always positive in the sense that it is not strongly correlated with good ratings. We observe a slightly positive slope in the graph linking revenues and Oscars indicating that playing in movies generating higher revenues is correlated with higher Oscar score (which is directly linked to the probability to get an Oscar over one’s career).
+
+The lack of strong correlations among scores implies that the pursuit of different types of accomplishments such as money, peer recognition, longevity, or positive ratings does not necessarily align. Our findings imply that success is multifaceted, and different characteristics may lead to distinct but equally valid forms of success. They also suggest that there is room for achieving success for many, as long as not everyone seeks the same dimension of it.
+This raises questions about the nature of success and whether focusing on one type of success goal could be a good strategy.  
+
+### The success story of Tom Cruise
+Are you familiar with Tom Cruise? Would you consider him a successful actor? If so, based on the insights shared earlier, what specific metrics contribute to his success?
+
+With the help of our analysis, we can now provide a quantitative assessment. Here is a spider chart representing various dimensions of Tom Cruise's success.
+
+[spiders]
+
+Tom Cruise demonstrates success across multiple dimensions. As we observed, diversification plays a crucial role in achieving high revenues. In the case of Oscars, factors such as the actor's age and the movie's duration come into play. This holds true for Tom Cruise, who has received three Oscar nominations and has been involved in movies that collectively generated x million USD.
+
 -----------------------
 
 ## Star Power: The Influence of Cast on Movie Revenue
