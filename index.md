@@ -71,9 +71,9 @@ The first analysis we will focus on is the frequency of appearances in movies pe
 
 In order to avoid to give too much importance to actors who appeared a lot during one year, we could focus on the mean frequency, which discriminates actors that once played in a lot of movies and then appeared way less, and this is a way to measure an entire career factor.  We filtered all the years before 1908 which seems not very insightful, and then plot the average frequency per year with the standard deviation for both genders and different regions of the world.
 
-<img src="assets/img/avg_movies_pyear.png" height=580px width=780px class="center"/>
-<img src="assets/img/avgmoviebygen.png" height=580px width=780px class="center"/>
-<img src="assets/img/avgmoviebyreg.png" height=580px width=780px class="center"/>
+<img src="assets/img/avg_movies_pyear.png" height=500px width=780px class="center"/>
+<img src="assets/img/avgmovbygen.png" height=500px width=780px class="center"/>
+<img src="assets/img/avgmovbyreg.png" height=500px width=780px class="center"/>
 
 It's evident that during the 1910s, the United States produced a majority of male actors, particularly known for their frequent appearances in numerous movies within a single year. However, when considering mean frequency, women from the same period also displayed high participation at that time. The context of the 1910s is crucial because during this period produced more short-movie, that demanded less effort compared to now-a-days movies. Additionally, the limited pool of available actors resulted in recurring roles for figures like Roscoe Arbuckle, Charlie Chaplin, Oliver Hardy for males, and Charlotte Burton and Louise Lester for females.
 
@@ -87,7 +87,8 @@ While some actors gain fame by appearing in numerous movies within a short timef
 
 Our analysis will delve into regional and gender differences, with a look at mid-career age (where available) to assess whether commencing a career at a young age holds significance in an actor's trajectory.
 
-//Plots span
+<img src="assets/img/histgender.png" height=580px width=780px class="center"/>
+<img src="assets/img/histreg.png" height=580px width=780px class="center"/>
 
 The analysis reveals that actors in South America and Europe tend to have a higher mid-career age compared to those in other regions, while those in Asia and Oceania exhibit a lower mid-career age. Although the dataset for Africa is limited, it suggests a trend toward shorter career spans, whereas the distribution in other regions appears more varied and diverse
 
@@ -97,7 +98,8 @@ Finally, despite the insights we got from the combined analyses of frequency and
 
 This forthcoming analysis will specifically concentrate on the density of movies produced, by gender and region. By examining movie density across these parameters, we aim to gain a more comprehensive understanding on the measuring of success.
 
-//Plots nbmv
+<img src="assets/img/nbmvgen.png" height=580px width=780px class="center"/>
+<img src="assets/img/nbmvreg.png" height=580px width=780px class="center"/>
 
 There are noticeable disparities between males and females in terms of the number of movies made (we applied a threshold to the male dataset for a clearer plot), with males generally being more numerous and having a higher overall number of movies. However, despite these differences, both genders exhibit a similar distribution pattern in terms of movie density. It is also crucial to highlight that the 'V' gaps in the plot result from missing values at specific movie counts — there are no actors with that exact number of movies.
 
