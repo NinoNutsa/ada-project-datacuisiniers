@@ -71,8 +71,9 @@ The first analysis we will focus on is the frequency of appearances in movies pe
 
 In order to avoid to give too much importance to actors who appeared a lot during one year, we could focus on the mean frequency, which discriminates actors that once played in a lot of movies and then appeared way less, and this is a way to measure an entire career factor.  We filtered all the years before 1908 which seems not very insightful, and then plot the average frequency per year with the standard deviation for both genders and different regions of the world.
 
-<script> function showFrame(frameId) { // Get all iframes with the toggle-frame class var frames = document.getElementsByClassName('toggle-frame'); // Hide all iframes with the toggle-frame class for (var i = 0; i < frames.length; i++) { frames[i].style.display = 'none'; } // Show the selected iframe var frame = document.getElementById(frameId); frame.style.display = 'block'; } </script>
-Normal Gender Region
+<script> function showFrame(frameId) {class var frames = document.getElementsByClassName('toggle-frame');
+                                      class for (var i = 0; i < frames.length; i++) { frames[i].style.display = 'none'; }
+                                      var frame = document.getElementById(frameId); frame.style.display = 'block'; } </script>
 
 <iframe class="toggle-frame" src="assets/img/avg_movies_pyear.png" width="750px" height="530px" frameborder="0" position="relative" id="Normal" style="display: block;">mean frequency</iframe> <iframe class="toggle-frame" src="assets/img/avgmoviebygen.png" width="750px" height="530px" frameborder="0" position="relative" id="Gender" style="display: none;">by gender</iframe> <iframe class="toggle-frame" src="assets/img/avgmoviebyreg.png" width="750px" height="530px" frameborder="0" position="relative" id="Region" style="display: none;">by region</iframe>
 
