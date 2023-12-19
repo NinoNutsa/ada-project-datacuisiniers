@@ -71,28 +71,10 @@ The first analysis we will focus on is the frequency of appearances in movies pe
 
 In order to avoid to give too much importance to actors who appeared a lot during one year, we could focus on the mean frequency, which discriminates actors that once played in a lot of movies and then appeared way less, and this is a way to measure an entire career factor.  We filtered all the years before 1908 which seems not very insightful, and then plot the average frequency per year with the standard deviation for both genders and different regions of the world.
 
-<style>
-  img#avg_movies_pyear {
-    display: block;
-    margin-left: 50px;
-    width: 600px;
-    height: 600px;
-  }
-</style>
+<script> function showFrame(frameId) { // Get all iframes with the toggle-frame class var frames = document.getElementsByClassName('toggle-frame'); // Hide all iframes with the toggle-frame class for (var i = 0; i < frames.length; i++) { frames[i].style.display = 'none'; } // Show the selected iframe var frame = document.getElementById(frameId); frame.style.display = 'block'; } </script>
+Normal Gender Region
 
-<img id="flavour2_img" src="assets/img/avg_movies_pyear.png" alt="Description of image 1">
-
-<script>
-  function swapImage3(newImage) {
-    var image = document.getElementById("avg_movies_pyear");
-    image.src = newImage;
-  }
-</script>
-
-<button class="button" style="margin: 8px 0; width: 20%; margin-left: 130px; margin-right: 5px" onclick="swapImage3('assets/img/flavor_graph_different_edges.png')">All connections</button>
-<button class="button" style="width: 20%; margin-right: 5px;" onclick="swapImage3('assets/img/avgmoviebygen.png')">By Gender</button>
-<button class="button" style="width: 20%;" onclick="swapImage3('assets/img/avgmoviebyreg.png')">By Region</button>
-<img src="assets/img/avg_movies_pyear.png" height=550px width=700px class="center"/>
+<iframe class="toggle-frame" src="assets/img/avg_movies_pyear.png" width="750px" height="530px" frameborder="0" position="relative" id="Normal" style="display: block;">mean frequency</iframe> <iframe class="toggle-frame" src="assets/img/avgmoviebygen.png" width="750px" height="530px" frameborder="0" position="relative" id="Gender" style="display: none;">by gender</iframe> <iframe class="toggle-frame" src="assets/img/avgmoviebyreg.png" width="750px" height="530px" frameborder="0" position="relative" id="Region" style="display: none;">by region</iframe>
 
 It's evident that during the 1910s, the United States produced a majority of male actors, particularly known for their frequent appearances in numerous movies within a single year. However, when considering mean frequency, women from the same period also displayed high participation at that time. The context of the 1910s is crucial because during this period produced more short-movie, that demanded less effort compared to now-a-days movies. Additionally, the limited pool of available actors resulted in recurring roles for figures like Roscoe Arbuckle, Charlie Chaplin, Oliver Hardy for males, and Charlotte Burton and Louise Lester for females.
 
