@@ -48,6 +48,7 @@ In the film industry, box office revenues directly reflect the popularity and co
 Cumulated revenues follow a power law, as some relatively small share of actors are involved in movies with huge profits.
 
 [distribution des cumulative revenus (log?)]
+<img src="assets/img/hist_log_revenue.png" height=600px width=720px class="center"/>
 
 We associate this amount to characteristics that are fixed over an actor's career, including their gender and the number of movies, languages, or movie genre they played in. The persona variable, added in a previous part of this project, adds information on the number of role types the actor played. It is a good proxy for how diversified one’s acting performances is. 
 
@@ -61,10 +62,12 @@ For the outcome, we do not consider different living standards across countries.
 As expected, the median revenues of movies have increased with time, hence the relevance of normalizing our data.
 
 [median revenues of movies over years]
+<img src="assets/img/median_revenue_over_years.png" height=600px width=720px class="center"/>
 
 We obtain a score between 0 and 10 directly linked to cumulated movie revenues.
 
 [distribution of scores]
+<img src="assets/img/hist_revenue_score.png" height=600px width=720px class="center"/>
 
 ### Longevity score
 
