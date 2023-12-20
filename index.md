@@ -145,7 +145,7 @@ This raises questions about the nature of success and whether focusing on one ty
 
 ### The success story of two hollywood actors : Tom Cruise & Anne Hathaway
 
-<img src="assets/img/anne_tom.png" height=580px width=780px class="center"/>
+<img src="assets/img/anne_tom.png" height=308px width=500px class="center"/>
 Objectively, Tom Cruise & Anne Hathaway emphasise the success story of all actors. Considering that assumption, what specific metrics contribute to their success?
 With the help of our analysis, we can now provide a quantitative assessment. Here is a spider chart representing various dimensions of Tom Cruise's and Anne Hathaway's success.
 
@@ -153,9 +153,11 @@ With the help of our analysis, we can now provide a quantitative assessment. Her
 
 Tom Cruise (61 yo) demonstrates success across all dimensions. As we observed, diversification plays a crucial role in achieving high revenues. In the case of Oscars, factors such as the actor's age and the movie's duration come into play. This holds true for Tom Cruise, who has received three Oscar nominations and has been involved in movies that [collectively generated 10 billion USD worlwide](https://www.the-numbers.com/person/540401-Tom-Cruise#tab=summary). Obviously, being older truely augments the longevity and revenue scores because he participated in more movies, but we can see that it does not help him for oscars attribution and ratings obtained compared to Anne Hathaway.  Indeed, on the other side, the younger actress Anne Hathaway (41 yo) has higher oscar and ratings scores, despite a slightly inferior revenue score, because she 'only' [generated around 2 billions USD worldwide](https://www.the-numbers.com/person/63020401-Anne-Hathaway#tab=summary). Taking into account these facts, we could consider that Anne Hathaway is more successful, but it is still a subjective opinion. 
 
-### Beginning at a young a age
+### Beginning at a young a age //Nutsa
+### How the career span impacts the overall scores ?
 
-Considering the age at which at which actors began to perform can be interesting. Indeed, we saw that there is a considerable difference between women and men mid-career age's. 
+Considering the example of Tom Cruise and Anne Hathaway, who have a high difference in terms of career span, we analyzed the correlation between the scores and the career span (without the longevity one which already takes into account the correlation between  
+<img src="assets/img/span_score.png" height=500px width=720px class="center"/>
 
 -----------------------
 
