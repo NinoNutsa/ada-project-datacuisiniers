@@ -156,8 +156,10 @@ Tom Cruise (61 yo) demonstrates success across all dimensions. As we observed, d
 ### Beginning at a young a age //Nutsa
 ### How the career span impacts the overall scores ?
 
-Considering the example of Tom Cruise and Anne Hathaway, who have a high difference in terms of career span, we analyzed the correlation between the scores and the career span (without the longevity one which already takes into account the correlation between  
+Considering the example of Tom Cruise and Anne Hathaway, who have a high difference in terms of career span, we analyzed the correlation between the scores and the career span (without the longevity one which already takes into account the career span).  
 <img src="assets/img/span_score.png" height=500px width=720px class="center"/>
+
+We can see that having awards and high ratings is way less correlated than being on trends (in fact having a long career augments the chance of persons searching for you) and revenues (seems logical also because appearances in more movies implies a global generated revenue higher). 
 
 -----------------------
 
