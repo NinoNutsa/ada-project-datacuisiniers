@@ -25,10 +25,6 @@ Join us on this exciting journey through data as we unravel the secrets behind a
 
 ## Part 1 ??
 
-#### Exemple insertion plot (ne pas effacer) 
-
-<iframe src="assets/plot/inflation-plot.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
-
 -----------------------
 
 ## What metrics should we define ? 
@@ -147,15 +143,19 @@ The pairwise correlations between success scores is not high, ranging from 0.08 
 The lack of strong correlations among scores implies that the pursuit of different types of accomplishments such as money, peer recognition, longevity, or positive ratings does not necessarily align. Our findings imply that success is multifaceted, and different characteristics may lead to distinct but equally valid forms of success. They also suggest that there is room for achieving success for many, as long as not everyone seeks the same dimension of it.
 This raises questions about the nature of success and whether focusing on one type of success goal could be a good strategy.  
 
-### The success story of Tom Cruise
-Are you familiar with Tom Cruise? Would you consider him a successful actor? If so, based on the insights shared earlier, what specific metrics contribute to his success?
+### The success story of two hollywood actors : Tom Cruise & Anne Hathaway
 
-With the help of our analysis, we can now provide a quantitative assessment. Here is a spider chart representing various dimensions of Tom Cruise's success.
+<img src="assets/img/anne_tom.png" height=580px width=780px class="center"/>
+Objectively, Tom Cruise & Anne Hathaway emphasise the success story of all actors. Considering that assumption, what specific metrics contribute to their success?
+With the help of our analysis, we can now provide a quantitative assessment. Here is a spider chart representing various dimensions of Tom Cruise's and Anne Hathaway's success.
 
-[spiders]
+<img src="assets/img/spider_anne_tom.png" height=580px width=780px class="center"/>
 
-Tom Cruise demonstrates success across multiple dimensions. As we observed, diversification plays a crucial role in achieving high revenues. In the case of Oscars, factors such as the actor's age and the movie's duration come into play. This holds true for Tom Cruise, who has received three Oscar nominations and has been involved in movies that collectively generated x million USD.
+Tom Cruise (61 yo) demonstrates success across all dimensions. As we observed, diversification plays a crucial role in achieving high revenues. In the case of Oscars, factors such as the actor's age and the movie's duration come into play. This holds true for Tom Cruise, who has received three Oscar nominations and has been involved in movies that [collectively generated 10 billion USD worlwide](https://www.the-numbers.com/person/540401-Tom-Cruise#tab=summary). Obviously, being older truely augments the longevity and revenue scores because he participated in more movies, but we can see that it does not help him for oscars attribution and ratings obtained compared to Anne Hathaway.  Indeed, on the other side, the younger actress Anne Hathaway (41 yo) has higher oscar and ratings scores, despite a slightly inferior revenue score, because she 'only' [generated around 2 billions USD worldwide](https://www.the-numbers.com/person/63020401-Anne-Hathaway#tab=summary). Taking into account these facts, we could consider that Anne Hathaway is more successful, but it is still a subjective opinion. 
 
+### Beginning at a young a age
+
+Considering the age at which at which actors began to perform can be interesting. Indeed, we saw that there is a considerable difference between women and men mid-career age's. 
 
 -----------------------
 
