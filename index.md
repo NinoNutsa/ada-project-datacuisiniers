@@ -2,9 +2,9 @@
 layout: page
 title: How to quantify the actors' success?
 subtitle: Diving into the determinants of movie stars’ accomplishments
-cover-img: /assets/img/movie.png
-thumbnail-img: /assets/img/movie.png
-share-img: /assets/img/movie.png
+cover-img: /assets/img/red-carpet.png
+thumbnail-img: /assets/img/red-carpet.png
+share-img: /assets/img/red-carpet.png
 use-site-title: true
 ---
 
@@ -24,33 +24,6 @@ Join us on this exciting journey through data as we unravel the secrets behind a
 -----------------
 
 ## Defining and Analyzing Key Success Metrics
-
-### Revenue score
-When considering the success of an actor, it is clear that revenues matters. A high salary earned from participating in a movie is not just a financial achievement, it serves as a validation of an actor's performance. It is a proof of the industry's recognition, affirming the quality of their work and its appreciation for it.
-
-Nevertheless, information regarding the personal income earned by actors for their roles in movies is not easily available. Hence, we consider movie box office revenues. In the film industry, box office revenues directly reflect the popularity and commercial success of a movie. Actors who consistently contribute to high-grossing films are often perceived as valuable assets in the industry, and in turn, successful.
-
-Cumulated revenues from movies then act as a proxy for the cumulated revenues of actors but are an imperfect substitute.
-Someone can play an unimportant role in many high revenues movies but it doesn't mean that they are getting a lot of income from it. Moreover, the causal relation between the presence of an actor in a movie and the money the movie generated is unclear. Some actors may specifically seek to play in movies that they know are going to be big (because of the people involved, the budget, …) while other have a direct influence on the movie’s profitability by participating. We do not establish any claim on this but simply acknowledge that an actor being associated with many profitable movies is an indicator of success.
-
-<img src="assets/img/hist_log_revenue.png" height=400px width=570px class="center"/>
-
-Cumulative earnings in the film industry exhibit a power law distribution, with a small fraction of actors participating in films that generate massive profits.
-
-We associate this amount to characteristics that are fixed over an actor's career: their gender and the number of movies, languages, countries, or movie genre they played in. The persona variable described previously adds information on the number of role types the actor played. It is a good proxy for how diversified one’s acting performances is. 
-Performing a regression, we find that all variables are statistically significant at the 5% level, meaning that the above-mentioned variables contribute to explain a part of the variations in cumulated revenues.
-
-Diversification appears to yield positive outcomes, as engaging in diverse languages, genres, and personas correlates with increased revenues. Gender also has a significant impact on revenues, with male actors experiencing a 0.91 higher revenues relative to the median compared to actresses.
-Quite counter-intuitively, playing in one more movie in a career is associated with lower revenues. This might be explained by the fact that big actors play only in selected movies whether those with smaller roles have to play in many small movies to sustain themselves. The many movies they play in is still not enough to gain as much money as big movie stars.
-Additionally, revenues experience a decline when actors engage in projects across more countries, as the coefficient on the number of unique countries one’s movies where from is negative. It suggests potential benefits from concentrating efforts within a single movie industry.
-
-To compare revenues, we do not consider different living standards across countries though we use revenues in USD consistently. However, we want to normalize the revenues per year to account for economic boosts and booms that might explain some yearly variations in revenues. We thus compare the revenues of a movie with respect to the revenues of the median profitable movie that year.
-As expected, the median revenues of movies have increased over time, highlighting the relevance of normalizing our data.
-
-<img src="assets/img/median_revenue_over_years.png" height=400px width=620px class="center"/>
-
-We obtain a score between 0 and 10 directly linked to cumulated movie revenues.
-
 
 ### Longevity score
 
@@ -94,6 +67,33 @@ There are noticeable disparities between males and females in terms of the numbe
 
 Finally, the longevity score consists of a balanced combination between these 3 components. 
 
+### Revenue score
+
+When considering the success of an actor, it is clear that revenues matters. A high salary earned from participating in a movie is not just a financial achievement, it serves as a validation of an actor's performance. It is a proof of the industry's recognition, affirming the quality of their work and its appreciation for it.
+
+Nevertheless, information regarding the personal income earned by actors for their roles in movies is not easily available. Hence, we consider movie box office revenues. In the film industry, box office revenues directly reflect the popularity and commercial success of a movie. Actors who consistently contribute to high-grossing films are often perceived as valuable assets in the industry, and in turn, successful.
+
+Cumulated revenues from movies then act as a proxy for the cumulated revenues of actors but are an imperfect substitute.
+Someone can play an unimportant role in many high revenues movies but it doesn't mean that they are getting a lot of income from it. Moreover, the causal relation between the presence of an actor in a movie and the money the movie generated is unclear. Some actors may specifically seek to play in movies that they know are going to be big (because of the people involved, the budget, …) while other have a direct influence on the movie’s profitability by participating. We do not establish any claim on this but simply acknowledge that an actor being associated with many profitable movies is an indicator of success.
+
+<img src="assets/img/hist_log_revenue.png" height=400px width=570px class="center"/>
+
+Cumulative earnings in the film industry exhibit a power law distribution, with a small fraction of actors participating in films that generate massive profits.
+
+We associate this amount to characteristics that are fixed over an actor's career: their gender and the number of movies, languages, countries, or movie genre they played in. The persona variable described previously adds information on the number of role types the actor played. It is a good proxy for how diversified one’s acting performances is. 
+Performing a regression, we find that all variables are statistically significant at the 5% level, meaning that the above-mentioned variables contribute to explain a part of the variations in cumulated revenues.
+
+Diversification appears to yield positive outcomes, as engaging in diverse languages, genres, and personas correlates with increased revenues. Gender also has a significant impact on revenues, with male actors experiencing a 0.91 higher revenues relative to the median compared to actresses.
+Quite counter-intuitively, playing in one more movie in a career is associated with lower revenues. This might be explained by the fact that big actors play only in selected movies whether those with smaller roles have to play in many small movies to sustain themselves. The many movies they play in is still not enough to gain as much money as big movie stars.
+Additionally, revenues experience a decline when actors engage in projects across more countries, as the coefficient on the number of unique countries one’s movies where from is negative. It suggests potential benefits from concentrating efforts within a single movie industry.
+
+To compare revenues, we do not consider different living standards across countries though we use revenues in USD consistently. However, we want to normalize the revenues per year to account for economic boosts and booms that might explain some yearly variations in revenues. We thus compare the revenues of a movie with respect to the revenues of the median profitable movie that year.
+As expected, the median revenues of movies have increased over time, highlighting the relevance of normalizing our data.
+
+<img src="assets/img/median_revenue_over_years.png" height=400px width=620px class="center"/>
+
+We obtain a score between 0 and 10 directly linked to cumulated movie revenues.
+
 ### Ratings
 
 The easiest way to measure the quality of a movie and the actors' performance is by giving a rating. Does this "metric" perfectly evaluate in an objective point of view an actor's qualities ? No, definitely not, since literally anyone can give their opinion, like us. But a decent amount can reflect a general perspective of the audience on said actor, and in today's day and age, it can quickly influence the public opinion in a good or bad way.
@@ -132,16 +132,25 @@ Finally, we want to create a score between 0 and 10 based on the probability of 
 
 Our goal is to offer a more nuanced understanding on the determinants of success. By combining diverse metrics, we strive for a more exhaustive examination given the limitations in each isolated measure. Using several score measures complementarily is key to go past potential biases and picture a more representative concept of success. Additionally, we want to investigate the correlation between various notions of success. For instance, do the actors successful at having a long career also have good ratings?
 
-[pairplot]
-[correlations]
+<img src="assets/img/pairplot.png" height=590px width=720px class="center"/>
+<img src="assets/img/correlation_scores.png" height=420px width=610px class="center"/>
 
-<img src="assets/img/pairplot.png" height=400px width=620px class="center"/>
-<img src="assets/img/correlation_scores.png" height=400px width=620px class="center"/>
-
-The pairwise correlations between success scores is not high, ranging from 0.08 to 0.38, but are always positive. Trends and Oscars exhibit the strongest correlations, which can be explained by the exposure given by getting an Oscar nomination or award to an actor, leading to more Google searches. Rating and trends have the weakest correlation, suggesting that trending is not always positive in the sense that it is not strongly correlated with good ratings (bad buzz). We observe a slightly positive slope in the graph linking revenues and Oscars indicating that playing in movies generating higher revenues is correlated with higher Oscar score (which is directly linked to the probability to get an Oscar over one’s career).
+The pairwise correlations between success scores is not high, ranging from 0.08 to 0.38, but are always positive. Trends and Oscars exhibit the strongest correlations, which can be explained by the exposure given by getting an Oscar nomination or award to an actor, leading to more Google searches. Rating and trends have the weakest correlation, suggesting that trending is not always positive (eg. searches related to a bad buzz). We observe a slightly positive slope in the graph linking revenues and Oscars indicating that playing in movies generating higher revenues is correlated with higher Oscar score (which is directly linked to the probability to get an Oscar over one’s career).
 
 The lack of strong correlations among scores implies that the pursuit of different types of accomplishments such as money, peer recognition, longevity, or positive ratings does not necessarily align. Our findings imply that success is multifaceted, and different characteristics may lead to distinct but equally valid forms of success. They also suggest that there is room for achieving success for many, as long as not everyone seeks the same dimension of it.
 This raises questions about the nature of success and whether focusing on one type of success goal could be a good strategy.  
+
+### Exploring correlations between success scores
+
+## Beginning at a young a age //Nutsa
+## How the career span impacts the overall scores ?
+
+Considering the example of Tom Cruise and Anne Hathaway, who have a high difference in terms of career span, we analyzed the correlation between the scores and the career span (without the longevity one which already takes into account the career span).  
+<img src="assets/img/span_score.png" height=500px width=720px class="center"/>
+
+We can see that having awards and high ratings is way less correlated than being on trends (in fact having a long career augments the chance of persons searching for you) and revenues (seems logical also because appearances in more movies implies a global generated revenue higher). 
+
+## The relationship between trends and ratings
 
 -----------------------
 ### Illustration: The success story of Tom Cruise & Anne Hathaway
@@ -155,13 +164,7 @@ With the help of our analysis, we can now provide a quantitative assessment. Her
 
 Tom Cruise (61 yo) demonstrates success across all dimensions. As we observed, diversification plays a crucial role in achieving high revenues. In the case of Oscars, factors such as the actor's age and the movie's duration come into play. This holds true for Tom Cruise, who has received three Oscar nominations and has been involved in movies that [collectively generated 10 billion USD worlwide](https://www.the-numbers.com/person/540401-Tom-Cruise#tab=summary). Obviously, being older truely augments the longevity and revenue scores because he participated in more movies, but we can see that it does not help him for oscars attribution and ratings obtained compared to Anne Hathaway.  Indeed, on the other side, the younger actress Anne Hathaway (41 yo) has higher oscar and ratings scores, despite a slightly inferior revenue score, because she 'only' [generated around 2 billions USD worldwide](https://www.the-numbers.com/person/63020401-Anne-Hathaway#tab=summary). Taking into account these facts, we could consider that Anne Hathaway is more successful, but it is still a subjective opinion. 
 
-### Beginning at a young a age //Nutsa
-### How the career span impacts the overall scores ?
 
-Considering the example of Tom Cruise and Anne Hathaway, who have a high difference in terms of career span, we analyzed the correlation between the scores and the career span (without the longevity one which already takes into account the career span).  
-<img src="assets/img/span_score.png" height=500px width=720px class="center"/>
-
-We can see that having awards and high ratings is way less correlated than being on trends (in fact having a long career augments the chance of persons searching for you) and revenues (seems logical also because appearances in more movies implies a global generated revenue higher). 
 
 -----------------------
 
