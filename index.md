@@ -204,8 +204,36 @@ This raises questions about the nature of success and whether focusing on one ty
 
 ### Which country?
 
-<iframe src="assets/img/combined_dash_app.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+<iframe src="assets/img/fig_longevity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
+<style>
+    button {
+        background-color: grey;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        color: white;
+    }
+</style>
+
+<!-- Define the initial figure -->
+<iframe id="success-figure" src="path/to/initial_figure.html" width="750px" height="530px" frameborder="0"></iframe>
+
+<!-- Define buttons for switching between figures -->
+<button onclick="swapFigure('assets/img/fig_longevity.html')">Figure 1</button>
+<button onclick="swapFigure('assets/img/fig_mean.html')">Figure 2</button>
+<button onclick="swapFigure('assets/img/fig_max.html')">Figure 3</button>
+<button onclick="swapFigure('assets/img/fig_rating.html')">Figure 4</button>
+
+<!-- JavaScript function for swapping figures -->
+<script>
+    function swapFigure(newSrc) {
+        var figure = document.getElementById('success-figure');
+        figure.src = newSrc;
+    }
+</script>
 
 ### Beginning at a young a age //Nutsa
 ### How the career span impacts the overall scores ?
