@@ -116,7 +116,7 @@ It is essential to recognize that the Oscars take place in the US. Consequently,
 
 Conducting a Random Forest Classification, we predict Oscar nominations or awards for actors based on specific performances in individual films. Eligibility spans the previous calendar year, so we consider features associated with a particular movie and year, excluding irrelevant factors like post-Oscar characteristics. We isolate key variables for prediction, including the actor's age on movie release date, gender, ethnicity, height (as a proxy for physique), movie language, country, genre, runtime, and persona (type of role played in the movie).
 
-<img src="assets/img/feature_importance_oscars_all.png" height=400px width=620px class="center"/>
+<img src="assets/img/feature_importance_oscars_all.png" height=410px width=580px class="center"/>
 
 We obtain that the most important feature is the actor's age when the movie is released, closely followed by the movie runtime. On the other side of the spectrum, gender does not seem to explain much of Oscars' winning. It was predictable since both men and women win as many Oscars and are not competing. Overall, it seems like both movie and actor characteristics are important to predict the nomination or award of Oscars. Ethnicity is an important feature as well, but the model does not allow us to say who it is favorable to.
 
@@ -132,17 +132,6 @@ Finally, we want to create a score between 0 and 10 based on the probability of 
 Our goal is to offer a more nuanced understanding on the determinants of success. By combining diverse metrics, we strive for a more exhaustive examination given the limitations in each isolated measure. Using several score measures complementarily is key to go past potential biases and picture a more representative concept of success. Additionally, we want to investigate the correlation between various notions of success. For instance, do the actors successful at having a long career also have good ratings?
 
 <style>
-        /* Center the button */
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        /* Style the button */
         button {
             background-color: grey;
             padding: 10px 20px;
@@ -183,8 +172,6 @@ Considering the example of Tom Cruise and Anne Hathaway, who have a high differe
 <img src="assets/img/span_score.png" height=500px width=720px class="center"/>
 
 We can see that having awards and high ratings is way less correlated than being on trends (in fact having a long career augments the chance of persons searching for you) and revenues (seems logical also because appearances in more movies implies a global generated revenue higher). 
-
-### The relationship between trends and ratings
 
 -----------------------
 ## Illustration: The success story of Tom Cruise & Anne Hathaway
