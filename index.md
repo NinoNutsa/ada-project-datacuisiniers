@@ -202,6 +202,47 @@ This raises questions about the nature of success and whether focusing on one ty
 
 ## Exploring correlations between success scores
 
+### Which country?
+<div id="figure-container">
+    <iframe src="fig_mean.html" width="100%" height="600px"></iframe>
+</div>
+
+<button onclick="toggleFigure()">Toggle Figure</button>
+
+<script>
+    function toggleFigure() {
+        var container = document.getElementById("figure-container");
+
+        // Check which figure is currently displayed
+        var currentFigure = container.dataset.currentFigure || 'fig_mean.html';
+
+        // Toggle to the next figure
+        var nextFigure;
+        switch (currentFigure) {
+            case 'fig_mean.html':
+                nextFigure = 'fig_max.html';
+                break;
+            case 'fig_max.html':
+                nextFigure = 'fig_rating.html';
+                break;
+            case 'fig_rating.html':
+                nextFigure = 'fig_longevity.html';
+                break;
+            case 'fig_longevity.html':
+                nextFigure = 'fig_mean.html';
+                break;
+            default:
+                nextFigure = 'fig_mean.html';
+        }
+
+        // Set the new figure source
+        container.innerHTML = `<iframe src="${nextFigure}" width="100%" height="600px"></iframe>`;
+
+        // Update the currentFigure attribute
+        container.dataset.currentFigure = nextFigure;
+    }
+</script>
+
 ### Beginning at a young a age //Nutsa
 ### How the career span impacts the overall scores ?
 
