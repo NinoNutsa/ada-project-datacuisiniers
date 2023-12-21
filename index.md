@@ -203,45 +203,68 @@ This raises questions about the nature of success and whether focusing on one ty
 ## Exploring correlations between success scores
 
 ### Which country?
-<div id="figure-container">
-    <iframe src="fig_mean.html" width="100%" height="600px"></iframe>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap HTML Files</title>
+    <style>
+        button {
+            background-color: grey;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Add an empty div to hold the HTML content -->
+<div id="html-container">
+    <!-- Load the default HTML file -->
+    <iframe src="assets/default.html" width="100%" height="600px"></iframe>
 </div>
 
-<button onclick="toggleFigure()">Toggle Figure</button>
+<button onclick="toggleHTML()">Toggle HTML</button>
 
 <script>
-    function toggleFigure() {
-        var container = document.getElementById("figure-container");
+    function toggleHTML() {
+        var container = document.getElementById("html-container");
 
-        // Check which figure is currently displayed
-        var currentFigure = container.dataset.currentFigure || 'fig_mean.html';
+        // Check which HTML file is currently displayed
+        var currentHTML = container.dataset.currentHTML || 'default.html';
 
-        // Toggle to the next figure
-        var nextFigure;
-        switch (currentFigure) {
-            case 'fig_mean.html':
-                nextFigure = 'fig_max.html';
+        // Toggle to the next HTML file
+        var nextHTML;
+        switch (currentHTML) {
+            case 'default.html':
+                nextHTML = 'alternate.html';
                 break;
-            case 'fig_max.html':
-                nextFigure = 'fig_rating.html';
+            case 'alternate.html':
+                nextHTML = 'another_alternate.html';
                 break;
-            case 'fig_rating.html':
-                nextFigure = 'fig_longevity.html';
-                break;
-            case 'fig_longevity.html':
-                nextFigure = 'fig_mean.html';
+            case 'another_alternate.html':
+                nextHTML = 'default.html';
                 break;
             default:
-                nextFigure = 'fig_mean.html';
+                nextHTML = 'default.html';
         }
 
-        // Set the new figure source
-        container.innerHTML = `<iframe src="${nextFigure}" width="100%" height="600px"></iframe>`;
+        // Set the new HTML source
+        container.innerHTML = `<iframe src="assets/${nextHTML}" width="100%" height="600px"></iframe>`;
 
-        // Update the currentFigure attribute
-        container.dataset.currentFigure = nextFigure;
+        // Update the currentHTML attribute
+        container.dataset.currentHTML = nextHTML;
     }
 </script>
+
+</body>
+</html>
+
 
 
 ### Beginning at a young a age //Nutsa
