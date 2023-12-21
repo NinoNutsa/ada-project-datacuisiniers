@@ -84,7 +84,7 @@ Finally, despite the insights we got from the combined analyses of frequency and
 
 This forthcoming analysis will specifically concentrate on the density of movies produced, by gender and region. By examining movie density across these parameters, we aim to gain a more comprehensive understanding on the measuring of success.
 
-<img id="nbmv" src="assets/img/avgmovbygen.png" alt="Number of Movies">
+<img id="nbmv" src="assets/img/nbmvgen.png" alt="Number of Movies">
 
 <button onclick="swapImageMalo3()">Gender/Region</button>
 
