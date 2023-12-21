@@ -206,19 +206,7 @@ This raises questions about the nature of success and whether focusing on one ty
 
 <iframe src="assets/img/fig_longevity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-
-<!-- Add buttons for each plot -->
-<button onclick="loadPlot('assets/img/fig_longevity.html')">Longevity Plot</button>
-<button onclick="loadPlot('fig_revenue.html')">Revenue Plot</button>
-<button onclick="loadPlot('fig_rating.html')">Rating Plot</button>
-<button onclick="loadPlot('fig_trends.html')">Trends Plot</button>
-
-<script>
-    function loadPlot(plotName) {
-        // Set the source of the iframe to the selected plot
-        document.getElementById('plot-frame').src = `assets/${plotName}`;
-    }
-</script>
+<iframe class="toggle-frame" src="assets/plot/fig_longevity.html" width="750px" height="530px" frameborder="0" position="relative" id="positive" style="display: block;">positive barplot</iframe> <iframe class="toggle-frame" src="assets/plot/fig_mean.html" width="750px" height="530px" frameborder="0" position="relative" id="negative" style="display: none;">negative barplot</iframe> <iframe class="toggle-frame" src="assets/plot/fig_max.html" width="750px" height="530px" frameborder="0" position="relative" id="violent" style="display: none;">violent barplot</iframe><iframe class="toggle-frame" src="assets/plot/fig_rating.html" width="750px" height="530px" frameborder="0" position="relative" id="violent" style="display: none;">violent barplot</iframe>
 
 
 ### Beginning at a young a age //Nutsa
