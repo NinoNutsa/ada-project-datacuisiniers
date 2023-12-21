@@ -34,11 +34,12 @@ In order to avoid to give too much importance to actors who appeared a lot durin
 
 
 <img id="frequencies" src="assets/img/avgmovbygen.png" alt="Frequencies">
+
 <button onclick="swapImageMalo1()">Gender/Region</button>
 
 <script>
     function swapImageMalo1() {
-        var image = document.getElementById("Frequencies");
+        var image = document.getElementById("frequencies");
         if (image.src.match("assets/img/avgmovbygen.png")) {
             image.src = "assets/img/avgmovbyreg.png";
         } else {
@@ -83,8 +84,20 @@ Finally, despite the insights we got from the combined analyses of frequency and
 
 This forthcoming analysis will specifically concentrate on the density of movies produced, by gender and region. By examining movie density across these parameters, we aim to gain a more comprehensive understanding on the measuring of success.
 
-<img src="assets/img/nbmvgen.png" height=400px width=624px class="center"/>
-<img src="assets/img/nbmvreg.png" height=400px width=624px class="center"/>
+<img id="nbmv" src="assets/img/avgmovbygen.png" alt="Number of Movies">
+
+<button onclick="swapImageMalo3()">Gender/Region</button>
+
+<script>
+    function swapImageMalo3() {
+        var image = document.getElementById("nbmv");
+        if (image.src.match("assets/img/nbmvgen.png")) {
+            image.src = "assets/img/nbmvreg.png";
+        } else {
+            image.src = "assets/img/nbmvgen.png";
+        }
+    }
+</script>
 
 There are noticeable disparities between males and females in terms of the number of movies made (we applied a threshold to the male dataset for a clearer plot), with males generally being more numerous and having a higher overall number of movies. However, despite these differences, both genders exhibit a similar distribution pattern in terms of movie density. It is also crucial to highlight that the 'V' gaps in the plot result from missing values at specific movie counts — there are no actors with that exact number of movies. 
 
