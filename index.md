@@ -67,8 +67,8 @@ Our analysis will delve into regional and gender differences, with a look at mid
 <script>
     function swapImage() {
         var image = document.getElementById("career_spans");
-        if (image.src.match("assets/img/histreg.png")) {
-            image.src = "assets/img/.png";
+        if (image.src.match("assets/img/histgender.png")) {
+            image.src = "assets/img/histreg.png";
         } else {
             image.src = "assets/img/histgender.png";
         }
