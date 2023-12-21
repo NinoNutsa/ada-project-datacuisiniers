@@ -207,31 +207,12 @@ This raises questions about the nature of success and whether focusing on one ty
 <iframe src="assets/img/fig_longevity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Switch Between Plots</title>
-    <style>
-        button {
-            background-color: grey;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            color: white;
-        }
-        #plot-container {
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
 
 <!-- Add an empty div to hold the plots -->
 <div id="plot-container">
     <!-- Load the default plot -->
     <iframe id="plot-frame" src="assets/fig_longevity.html" width="100%" height="530px" frameborder="0"></iframe>
+    <iframe id="plot-frame" src="assets/fig_mean.html" width="100%" height="530px" frameborder="0"></iframe>
 </div>
 
 <!-- Add buttons for each plot -->
