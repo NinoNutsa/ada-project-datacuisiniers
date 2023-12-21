@@ -48,8 +48,32 @@ While some actors gain fame by appearing in numerous movies within a short timef
 
 Our analysis will delve into regional and gender differences, with a look at mid-career age (where available) to assess whether commencing a career at a young age holds significance in an actor's trajectory.
 
-<img src="assets/img/histgender.png" height=300px width=733px class="center"/>
-<img src="assets/img/histreg.png" height=300px width=733px class="center"/>
+<style>
+        button {
+            background-color: grey;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+        }
+    </style>
+    
+<img id="career_spans" src="assets/img/histgender.png" alt="Career span">
+
+<button onclick="swapImage()">Gender/Region</button>
+
+<script>
+    function swapImage() {
+        var image = document.getElementById("career_spans");
+        if (image.src.match("assets/img/histreg.png")) {
+            image.src = "assets/img/.png";
+        } else {
+            image.src = "assets/img/histgender.png";
+        }
+    }
+</script>
 
 The analysis reveals that actors in South America and Europe tend to have a higher mid-career age compared to those in other regions, while those in Asia and Oceania exhibit a lower mid-career age. Although the dataset for Africa is limited, it suggests a trend toward shorter career spans, whereas the distribution in other regions appears more varied and diverse. Note that the negative values comes from the estimator used, and in fact corresponds to 0. 
 
