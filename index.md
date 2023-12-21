@@ -2,7 +2,7 @@
 layout: page
 title: How to quantify the actors' success?
 subtitle: Diving into the determinants of movie stars’ accomplishments
-cover-img: /assets/img/actors_backg.png
+cover-img: /assets/img/actros_back.png
 thumbnail-img: /assets/img/red-carpet.png
 share-img: /assets/img/red-carpet.png
 use-site-title: true
