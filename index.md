@@ -22,9 +22,8 @@ To shed light on the diverse factors influencing an actor's journey, we articula
 Join us on this exciting journey through data as we unravel the secrets behind an actor's ascent to stardom, offering a unique perspective on the intricate tapestry of success in the world of cinema!
 
 -----------------
-
 ## Defining and Analyzing Key Success Metrics
-
+-----------------
 ### Longevity score
 
 #### Frequency of appearance
@@ -119,7 +118,7 @@ Conducting a Random Forest Classification, we predict Oscar nominations or award
 
 <img src="assets/img/feature_importance_oscars_all.png" height=400px width=570px class="center"/>
 
-<script> function swapImage() { var image = document.getElementById("communities_img"); if (image.src.match("assets/img/feature_importance_oscars_all.png")) { image.src = "assets/img/feature_importance_oscars_select.png"; } else { image.src = "assets/img/feature_importance_oscars_all.png"; } } </script>
+<script> function swapImage() { var image = document.getElementById("feature_importance_oscars_all_img"); if (image.src.match("assets/img/feature_importance_oscars_all.png")) { image.src = "assets/img/feature_importance_oscars_select.png"; } else { image.src = "assets/img/feature_importance_oscars_all.png"; } } </script>
 Restricted features
 
 We obtain that the most important feature is the actor's age when the movie is released, closely followed by the movie runtime. On the other side of the spectrum, gender does not seem to explain much of Oscars' winning. It was predictable since both men and women win as many Oscars and are not competing. Overall, it seems like both movie and actor characteristics are important to predict the nomination or award of Oscars. Ethnicity is an important feature as well, but the model does not allow us to say who it is favorable to.
@@ -143,20 +142,20 @@ The pairwise correlations between success scores is not high, ranging from 0.08 
 The lack of strong correlations among scores implies that the pursuit of different types of accomplishments such as money, peer recognition, longevity, or positive ratings does not necessarily align. Our findings imply that success is multifaceted, and different characteristics may lead to distinct but equally valid forms of success. They also suggest that there is room for achieving success for many, as long as not everyone seeks the same dimension of it.
 This raises questions about the nature of success and whether focusing on one type of success goal could be a good strategy.  
 
-### Exploring correlations between success scores
+## Exploring correlations between success scores
 
-## Beginning at a young a age //Nutsa
-## How the career span impacts the overall scores ?
+### Beginning at a young a age //Nutsa
+### How the career span impacts the overall scores ?
 
 Considering the example of Tom Cruise and Anne Hathaway, who have a high difference in terms of career span, we analyzed the correlation between the scores and the career span (without the longevity one which already takes into account the career span).  
 <img src="assets/img/span_score.png" height=500px width=720px class="center"/>
 
 We can see that having awards and high ratings is way less correlated than being on trends (in fact having a long career augments the chance of persons searching for you) and revenues (seems logical also because appearances in more movies implies a global generated revenue higher). 
 
-## The relationship between trends and ratings
+### The relationship between trends and ratings
 
 -----------------------
-### Illustration: The success story of Tom Cruise & Anne Hathaway
+## Illustration: The success story of Tom Cruise & Anne Hathaway
 -----------------------
 
 <img src="assets/img/anne_tom.png" height=308px width=500px class="center"/>
