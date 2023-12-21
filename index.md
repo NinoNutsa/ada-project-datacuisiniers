@@ -116,8 +116,8 @@ It is essential to recognize that the Oscars take place in the US. Consequently,
 
 Conducting a Random Forest Classification, we predict Oscar nominations or awards for actors based on specific performances in individual films. Eligibility spans the previous calendar year, so we consider features associated with a particular movie and year, excluding irrelevant factors like post-Oscar characteristics. We isolate key variables for prediction, including the actor's age on movie release date, gender, ethnicity, height (as a proxy for physique), movie language, country, genre, runtime, and persona (type of role played in the movie).
 
+<style> img#feature_importance_oscars_all_img { display: block; margin-left: 50px; width: 600px; height: 500px;git } .button { background-color: #3e0000; border: none; border-radius: 10px; color: white; padding: 14px 20px; text-align: center; font-size: 11px; text-decoration: none; display: inline-block; cursor: pointer; font-size: 11px; } </style>
 <img src="assets/img/feature_importance_oscars_all.png" height=400px width=570px class="center"/>
-
 <script> function swapImage() { var image = document.getElementById("feature_importance_oscars_all_img"); if (image.src.match("assets/img/feature_importance_oscars_all.png")) { image.src = "assets/img/feature_importance_oscars_select.png"; } else { image.src = "assets/img/feature_importance_oscars_all.png"; } } </script>
 Restricted features
 
