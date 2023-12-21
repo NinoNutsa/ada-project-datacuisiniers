@@ -207,16 +207,8 @@ This raises questions about the nature of success and whether focusing on one ty
 <iframe src="assets/img/fig_longevity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 
-
-<!-- Add an empty div to hold the plots -->
-<div id="plot-container">
-    <!-- Load the default plot -->
-    <iframe id="plot-frame" src="assets/fig_longevity.html" width="100%" height="530px" frameborder="0"></iframe>
-    <iframe id="plot-frame" src="assets/fig_mean.html" width="100%" height="530px" frameborder="0"></iframe>
-</div>
-
 <!-- Add buttons for each plot -->
-<button onclick="loadPlot('fig_longevity.html')">Longevity Plot</button>
+<button onclick="loadPlot('assets/img/fig_longevity.html')">Longevity Plot</button>
 <button onclick="loadPlot('fig_revenue.html')">Revenue Plot</button>
 <button onclick="loadPlot('fig_rating.html')">Rating Plot</button>
 <button onclick="loadPlot('fig_trends.html')">Trends Plot</button>
