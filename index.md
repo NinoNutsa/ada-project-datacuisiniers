@@ -203,68 +203,8 @@ This raises questions about the nature of success and whether focusing on one ty
 ## Exploring correlations between success scores
 
 ### Which country?
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swap HTML Files</title>
-    <style>
-        button {
-            background-color: grey;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            color: white;
-        }
-    </style>
-</head>
-<body>
 
-<!-- Add an empty div to hold the HTML content -->
-<div id="html-container">
-    <!-- Load the default HTML file -->
-    <iframe src="assets/default.html" width="100%" height="600px"></iframe>
-</div>
-
-<button onclick="toggleHTML()">Toggle HTML</button>
-
-<script>
-    function toggleHTML() {
-        var container = document.getElementById("html-container");
-
-        // Check which HTML file is currently displayed
-        var currentHTML = container.dataset.currentHTML || 'default.html';
-
-        // Toggle to the next HTML file
-        var nextHTML;
-        switch (currentHTML) {
-            case 'default.html':
-                nextHTML = 'alternate.html';
-                break;
-            case 'alternate.html':
-                nextHTML = 'another_alternate.html';
-                break;
-            case 'another_alternate.html':
-                nextHTML = 'default.html';
-                break;
-            default:
-                nextHTML = 'default.html';
-        }
-
-        // Set the new HTML source
-        container.innerHTML = `<iframe src="assets/${nextHTML}" width="100%" height="600px"></iframe>`;
-
-        // Update the currentHTML attribute
-        container.dataset.currentHTML = nextHTML;
-    }
-</script>
-
-</body>
-</html>
-
+<img src="assets/img/fig_longevity.html" height=500px width=720px class="center"/>
 
 
 ### Beginning at a young a age //Nutsa
