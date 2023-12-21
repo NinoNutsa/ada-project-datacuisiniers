@@ -217,7 +217,7 @@ Developing precise metrics to assess an actor's success, we explore how these me
 </style>
 
 <!-- Define the initial figure -->
-<iframe id="success-figure" src="path/to/initial_figure.html" width="750px" height="530px" frameborder="0"></iframe>
+<iframe id="success-figure" src="assets/img/fig_longevity.html" width="750px" height="530px" frameborder="0"></iframe>
 
 <!-- Define buttons for switching between figures -->
 <button onclick="swapFigure('assets/img/fig_longevity.html')">Longevity</button>
