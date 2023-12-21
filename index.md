@@ -204,7 +204,7 @@ This raises questions about the nature of success and whether focusing on one ty
 
 ### Which country?
 
-<img src="assets/img/fig_longevity.html" height=500px width=720px class="center"/>
+<iframe src="assets/img/fig_longevity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 
 ### Beginning at a young a age //Nutsa
