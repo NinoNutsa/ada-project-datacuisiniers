@@ -32,9 +32,20 @@ The first analysis we will focus on is the frequency of appearances in movies pe
 
 In order to avoid to give too much importance to actors who appeared a lot during one year, we could focus on the mean frequency, which discriminates actors that once played in a lot of movies and then appeared way less, and this is a way to measure an entire career factor.  We filtered all the years before 1908 which seems not very insightful, and then plot the average frequency per year with the standard deviation for both genders and different regions of the world.
 
-<img src="assets/img/avg_movies_pyear.png" height=400px width=624px class="center"/>
-<img src="assets/img/avgmovbygen.png" height=400px width=624px class="center"/>
-<img src="assets/img/avgmovbyreg.png" height=400px width=624px class="center"/>
+
+<img id="frequencies" src="assets/img/avgmovbygen.png" alt="Frequencies">
+<button onclick="swapImageMalo1()">Gender/Region</button>
+
+<script>
+    function swapImageMalo1() {
+        var image = document.getElementById("Frequencies");
+        if (image.src.match("assets/img/avgmovbygen.png")) {
+            image.src = "assets/img/avgmovbyreg.png";
+        } else {
+            image.src = "assets/img/avgmovbygen.png";
+        }
+    }
+</script>
 
 It is evident that during the 1910s, the United States produced a majority of male actors, particularly known for their frequent appearances in numerous movies within a single year. However, when considering mean frequency, women from the same period also displayed high participation at that time. The context of the 1910s is crucial because during this period produced more short-movie, that demanded less effort compared to now-a-days movies. Additionally, the limited pool of available actors resulted in recurring roles for figures like Roscoe Arbuckle, Charlie Chaplin, Oliver Hardy for men, and Charlotte Burton and Louise Lester for women.
 
@@ -51,10 +62,10 @@ Our analysis will delve into regional and gender differences, with a look at mid
   
 <img id="career_spans" src="assets/img/histgender.png" alt="Career span">
 
-<button onclick="swapImageMalo()">Gender/Region</button>
+<button onclick="swapImageMalo2()">Gender/Region</button>
 
 <script>
-    function swapImageMalo() {
+    function swapImageMalo2() {
         var image = document.getElementById("career_spans");
         if (image.src.match("assets/img/histgender.png")) {
             image.src = "assets/img/histreg.png";
