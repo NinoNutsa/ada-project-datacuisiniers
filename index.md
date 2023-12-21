@@ -121,6 +121,21 @@ Conducting a Random Forest Classification, we predict Oscar nominations or award
 <script> function swapImage() { var image = document.getElementById("feature_importance_oscars_all_img"); if (image.src.match("assets/img/feature_importance_oscars_all.png")) { image.src = "assets/img/feature_importance_oscars_select.png"; } else { image.src = "assets/img/feature_importance_oscars_all.png"; } } </script>
 Restricted features
 
+<img id="all_features" src="assets/img/feature_importance_oscars_all.png" alt="Restricted Features">
+
+<button onclick="swapImage()">Toggle Image</button>
+
+<script>
+    function swapImage() {
+        var image = document.getElementById("all_features");
+        if (image.src.match("assets/img/feature_importance_oscars_all.png")) {
+            image.src = "assets/img/feature_importance_oscars_select.png";
+        } else {
+            image.src = "assets/img/feature_importance_oscars_all.png";
+        }
+    }
+</script>
+
 We obtain that the most important feature is the actor's age when the movie is released, closely followed by the movie runtime. On the other side of the spectrum, gender does not seem to explain much of Oscars' winning. It was predictable since both men and women win as many Oscars and are not competing. Overall, it seems like both movie and actor characteristics are important to predict the nomination or award of Oscars. Ethnicity is an important feature as well, but the model does not allow us to say who it is favorable to.
 
 Finally, we want to create a score between 0 and 10 based on the probability of being nominated or winning an Oscar for a given movie and actor. To do so, we compute a weighted sum of the probabilities to have nothing, get a nomination, or get an award given by our model. Then, we simply sum up the scores by actor to obtain a score representative of getting an Oscar over their entire career. 
