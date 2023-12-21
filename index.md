@@ -204,9 +204,7 @@ This raises questions about the nature of success and whether focusing on one ty
 
 ### Which country?
 
-<iframe src="assets/img/fig_longevity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
-
-<iframe class="toggle-frame" src="assets/plot/fig_longevity.html" width="750px" height="530px" frameborder="0" position="relative" id="positive" style="display: block;">positive barplot</iframe> <iframe class="toggle-frame" src="assets/plot/fig_mean.html" width="750px" height="530px" frameborder="0" position="relative" id="negative" style="display: none;">negative barplot</iframe> <iframe class="toggle-frame" src="assets/plot/fig_max.html" width="750px" height="530px" frameborder="0" position="relative" id="violent" style="display: none;">violent barplot</iframe><iframe class="toggle-frame" src="assets/plot/fig_rating.html" width="750px" height="530px" frameborder="0" position="relative" id="violent" style="display: none;">violent barplot</iframe>
+<iframe src="assets/img/combined_dash_app.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 
 ### Beginning at a young a age //Nutsa
