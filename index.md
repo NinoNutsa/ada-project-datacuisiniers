@@ -202,10 +202,8 @@ This raises questions about the nature of success and whether focusing on one ty
 
 ## Exploring correlations between success scores
 
-### Which country?
-
-<iframe src="assets/img/fig_longevity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
-
+### Regional Dynamics: Geographical Influences on Actor Success
+Developing precise metrics to assess an actor's success, we explore how these metrics vary across different regions. A key question emerges: Does choosing a specific region offer actors a strategic advantage in achieving success? This question prompts us to consider whether certain locations provide a more favorable path to accomplishment in the entertainment industry.
 <style>
     button {
         background-color: grey;
@@ -222,10 +220,10 @@ This raises questions about the nature of success and whether focusing on one ty
 <iframe id="success-figure" src="path/to/initial_figure.html" width="750px" height="530px" frameborder="0"></iframe>
 
 <!-- Define buttons for switching between figures -->
-<button onclick="swapFigure('assets/img/fig_longevity.html')">Figure 1</button>
-<button onclick="swapFigure('assets/img/fig_mean.html')">Figure 2</button>
-<button onclick="swapFigure('assets/img/fig_max.html')">Figure 3</button>
-<button onclick="swapFigure('assets/img/fig_rating.html')">Figure 4</button>
+<button onclick="swapFigure('assets/img/fig_longevity.html')">Longevity</button>
+<button onclick="swapFigure('assets/img/fig_mean.html')">Revenue mean</button>
+<button onclick="swapFigure('assets/img/fig_max.html')">Revenue max 3</button>
+<button onclick="swapFigure('assets/img/fig_rating.html')">Rating</button>
 
 <!-- JavaScript function for swapping figures -->
 <script>
