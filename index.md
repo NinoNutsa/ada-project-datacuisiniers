@@ -116,25 +116,7 @@ It is essential to recognize that the Oscars take place in the US. Consequently,
 
 Conducting a Random Forest Classification, we predict Oscar nominations or awards for actors based on specific performances in individual films. Eligibility spans the previous calendar year, so we consider features associated with a particular movie and year, excluding irrelevant factors like post-Oscar characteristics. We isolate key variables for prediction, including the actor's age on movie release date, gender, ethnicity, height (as a proxy for physique), movie language, country, genre, runtime, and persona (type of role played in the movie).
 
-<style> img#feature_importance_oscars_all_img { display: block; margin-left: 50px; width: 600px; height: 500px;git } .button { background-color: #3e0000; border: none; border-radius: 10px; color: white; padding: 14px 20px; text-align: center; font-size: 11px; text-decoration: none; display: inline-block; cursor: pointer; font-size: 11px; } </style>
-<img src="assets/img/feature_importance_oscars_all.png" height=400px width=570px class="center"/>
-<script> function swapImage() { var image = document.getElementById("feature_importance_oscars_all_img"); if (image.src.match("assets/img/feature_importance_oscars_all.png")) { image.src = "assets/img/feature_importance_oscars_select.png"; } else { image.src = "assets/img/feature_importance_oscars_all.png"; } } </script>
-Restricted features
-
-<img id="all_features" src="assets/img/feature_importance_oscars_all.png" alt="Restricted Features">
-
-<button onclick="swapImage()">Toggle Image</button>
-
-<script>
-    function swapImage() {
-        var image = document.getElementById("all_features");
-        if (image.src.match("assets/img/feature_importance_oscars_all.png")) {
-            image.src = "assets/img/feature_importance_oscars_select.png";
-        } else {
-            image.src = "assets/img/feature_importance_oscars_all.png";
-        }
-    }
-</script>
+<img src="assets/img/feature_importance_oscars_all.png" height=400px width=620px class="center"/>
 
 We obtain that the most important feature is the actor's age when the movie is released, closely followed by the movie runtime. On the other side of the spectrum, gender does not seem to explain much of Oscars' winning. It was predictable since both men and women win as many Oscars and are not competing. Overall, it seems like both movie and actor characteristics are important to predict the nomination or award of Oscars. Ethnicity is an important feature as well, but the model does not allow us to say who it is favorable to.
 
@@ -149,8 +131,43 @@ Finally, we want to create a score between 0 and 10 based on the probability of 
 
 Our goal is to offer a more nuanced understanding on the determinants of success. By combining diverse metrics, we strive for a more exhaustive examination given the limitations in each isolated measure. Using several score measures complementarily is key to go past potential biases and picture a more representative concept of success. Additionally, we want to investigate the correlation between various notions of success. For instance, do the actors successful at having a long career also have good ratings?
 
-<img src="assets/img/pairplot.png" height=590px width=720px class="center"/>
-<img src="assets/img/correlation_scores.png" height=420px width=610px class="center"/>
+<style>
+        /* Center the button */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Style the button */
+        button {
+            background-color: grey;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+        }
+    </style>
+    
+<img id="correlations" src="assets/img/correlation_scores.png" alt="Correlations">
+
+<button onclick="swapImage()">Pairplot</button>
+
+<script>
+    function swapImage() {
+        var image = document.getElementById("correlations");
+        if (image.src.match("assets/img/correlation_scores.png")) {
+            image.src = "assets/img/pairplot.png";
+        } else {
+            image.src = "assets/img/correlation_scores.png";
+        }
+    }
+</script>
 
 The pairwise correlations between success scores is not high, ranging from 0.08 to 0.38, but are always positive. Trends and Oscars exhibit the strongest correlations, which can be explained by the exposure given by getting an Oscar nomination or award to an actor, leading to more Google searches. Rating and trends have the weakest correlation, suggesting that trending is not always positive (eg. searches related to a bad buzz). We observe a slightly positive slope in the graph linking revenues and Oscars indicating that playing in movies generating higher revenues is correlated with higher Oscar score (which is directly linked to the probability to get an Oscar over one’s career).
 
