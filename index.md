@@ -48,24 +48,13 @@ While some actors gain fame by appearing in numerous movies within a short timef
 
 Our analysis will delve into regional and gender differences, with a look at mid-career age (where available) to assess whether commencing a career at a young age holds significance in an actor's trajectory.
 
-<style>
-        button {
-            background-color: grey;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            color: white;
-        }
-    </style>
-    
+  
 <img id="career_spans" src="assets/img/histgender.png" alt="Career span">
 
-<button onclick="swapImage()">Gender/Region</button>
+<button onclick="swapImageMalo()">Gender/Region</button>
 
 <script>
-    function swapImage() {
+    function swapImageMalo() {
         var image = document.getElementById("career_spans");
         if (image.src.match("assets/img/histgender.png")) {
             image.src = "assets/img/histreg.png";
