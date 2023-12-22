@@ -24,6 +24,11 @@ Join us on this exciting journey through data as we unravel the secrets behind a
 -----------------
 ## Defining and Analyzing Key Success Metrics
 -----------------
+### Personas
+
+Character archetypes, as diverse and nuanced as the human experience itself, provide storytellers with a rich tapestry of personas that resonate universally. These archetypes encapsulate familiar traits, behaviors, and motivations that have stood the test of time, offering a framework for understanding the human psyche. When applied to the realm of film and performance, character archetypes become a fascinating lens through which to quantify the versatility of actors. An actor's ability to convincingly portray a range of archetypes—from the hero and the villain to the sage and the jester—reflects not only their talent but also their capacity to tap into the depth and complexity of human emotion.
+<img id="Persona Archtypes" src="assets/img/Archetypes.jpg.webp" alt="Persona Archtypes">
+
 ### Longevity score
 
 #### Frequency of appearance
