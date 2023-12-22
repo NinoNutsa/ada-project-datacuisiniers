@@ -296,7 +296,8 @@ We can see that having awards and high ratings is way less correlated than being
 -----------------------
 
 <img src="assets/img/anne_tom.png" height=308px width=500px class="center"/>
-Objectively, Tom Cruise & Anne Hathaway emphasise the success story of all actors. Considering that assumption, what specific metrics contribute to their success?
+To provide concrete illustration of our results, we decided to portray the success stories of Tom Cruise & Anne Hathaway.
+What specific metrics contribute to their success?
 With the help of our analysis, we can now provide a quantitative assessment. Here is a spider chart representing various dimensions of Tom Cruise's and Anne Hathaway's success.
 
 <img src="assets/img/spider_anne_tom.png" height=580px width=780px class="center"/>
