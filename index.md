@@ -32,7 +32,7 @@ Character archetypes, as diverse and nuanced as the human experience itself, pro
 
 The exploration of character archetypes in the context of film personas draws inspiration from the work of scientists: David Bamman, Brendan O’Connor and Noah A. Smith , on developping computational methods to uncover character types from movie summaries [Learning Latent Personas of Film Characters](https://aclanthology.org/P13-1035.pdf). This work, defines personas as sets of mixtures over latent lexical classes. These classes capture stereotypical actions, attributes, and roles that characters embody in storytelling. The article introduces a novel dataset for text-driven film analysis and provides a benchmark testbed, marking a significant step toward understanding the intricacies of character representation in narratives. The study's insights have served as a foundation for for identifying persona clusters linked to each character, providing a method to quantify the diversity of roles portrayed by actors. The computational analysis of character archetypes contributes to a deeper comprehension of the versatile and dynamic nature of storytelling in the world of cinema.
 The figure below presents the distribution of the number of distinct personas embodied by actors within the examined dataset.
-<iframe id="persona_distribution" src="assets/img/persona_distrib.html" width="750px" height="530px" frameborder="0"></iframe>
+<iframe id="persona_distribution" src="assets/img/persona.html" width="750px" height="530px" frameborder="0"></iframe>
 
 Within the scope of this study, the number of unique personas played by an actor over the course of their career emerges as a crucial metric in gauging versatility.
 
