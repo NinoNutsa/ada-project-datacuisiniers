@@ -29,6 +29,10 @@ Join us on this exciting journey through data as we unravel the secrets behind a
 Character archetypes, as diverse and nuanced as the human experience itself, provide storytellers with a rich tapestry of personas that resonate universally. These archetypes encapsulate familiar traits, behaviors, and motivations that have stood the test of time, offering a framework for understanding the human psyche. When applied to the realm of film and performance, character archetypes become a fascinating lens through which to quantify the versatility of actors. An actor's ability to convincingly portray a range of archetypes—from the hero and the villain to the sage and the jester—reflects not only their talent but also their capacity to tap into the depth and complexity of human emotion.
 <img id="Persona Archtypes" src="assets/img/Archetypes.jpg.webp" alt="Persona Archtypes">
 
+The exploration of character archetypes in the context of film personas draws inspiration from a scientific article that delves into the computational analysis of narrative and character types. This groundbreaking work, conducted within the framework of latent variable models, defines personas as sets of mixtures over latent lexical classes. These classes capture stereotypical actions, attributes, and roles that characters embody in storytelling. The article introduces a novel dataset for text-driven film analysis and provides a benchmark testbed, marking a significant step toward understanding the intricacies of character representation in narratives. The study's insights have served as a foundation for projects like mine, where the computational analysis of character archetypes contributes to a deeper comprehension of the versatile and dynamic nature of storytelling in the world of cinema.
+
+<iframe id="persona_distribution" src="assets/img/persona_distrib.html" width="750px" height="530px" frameborder="0"></iframe>
+
 ### Longevity score
 
 #### Frequency of appearance
@@ -245,7 +249,7 @@ Developing precise metrics to assess an actor's success, we explore how these me
 <!-- Define buttons for switching between figures -->
 <button onclick="swapFigure('assets/img/fig_longevity.html')">Longevity</button>
 <button onclick="swapFigure('assets/img/fig_mean.html')">Revenue mean</button>
-<button onclick="swapFigure('assets/img/fig_max.html')">Revenue max 3</button>
+<button onclick="swapFigure('assets/img/fig_max.html')">Revenue max</button>
 <button onclick="swapFigure('assets/img/fig_rating.html')">Rating</button>
 
 <!-- JavaScript function for swapping figures -->
@@ -256,7 +260,12 @@ Developing precise metrics to assess an actor's success, we explore how these me
     }
 </script>
 
-### Beginning at a young a age //Nutsa
+### Oscar Winner's Profile
+
+<img src="assets/img/time_oscar_winner.png" height=308px width=500px class="center"/>
+<iframe id="oscar_persona" src="assets/img/nb_persona_oscar.html" width="750px" height="530px" frameborder="0"></iframe>
+<img src="assets/img/regression_persona_oscar.png" height=308px width=500px class="center"/>
+
 ### How the career span impacts the overall scores ?
 
 Considering the example of Tom Cruise and Anne Hathaway, who have a high difference in terms of career span, we analyzed the correlation between the scores and the career span (without the longevity one which already takes into account the career span).  
