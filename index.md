@@ -157,10 +157,28 @@ Conducting a Random Forest Classification, we predict Oscar nominations or award
 
 We obtain that the most important feature is the actor's age when the movie is released, closely followed by the movie runtime. On the other side of the spectrum, gender does not seem to explain much of Oscars' winning. It was predictable since both men and women win as many Oscars and are not competing. Overall, it seems like both movie and actor characteristics are important to predict the nomination or award of Oscars. Ethnicity is an important feature as well, but the model does not allow us to say who it is favorable to.
 
-Finally, we want to create a score between 0 and 10 based on the probability of being nominated or winning an Oscar for a given movie and actor. To do so, we compute a weighted sum of the probabilities to have nothing, get a nomination, or get an award given by our model. Then, we simply sum up the scores by actor to obtain a score representative of getting an Oscar over their entire career. 
+Finally, we want to create a score between 0 and 10 based on the probability of being nominated or winning an Oscar for a given movie and actor. To do so, we compute a weighted sum of the probabilities to have nothing, get a nomination, or get an award given by our model. Then, we simply sum up the scores by actor to obtain a score representative of getting an Oscar over their entire career.
+
+We observe a large disparity in the number of searches between the actors. For example, Tom Cruise is 1000 times more searched than 70% of the dataset.
 
 
 ### Trends
+
+When we talk about an actor's success, we may have in mind the fact that he's well known, that people are interested in him, that he's in the news, and so on. And so one thing that seems relevant is to evaluate this and look at the internet search statistics for each actor. As no such public database exists to our knowledge, we decided to create it.
+
+We used Google Trends, which is a service that allows you to obtain different search statistics for keywords on the Google search engine. Some APIs, like pytrends in python, allow you to send requests to this service to obtain statistics. This allowed us to automate data collection, because given the very high number of actors, and the fact that Google trends only allows us to request information on 5 actors at a time, it would have been much too long to do it manually with the browser interface.
+
+However, Google Trends only agrees to respond to a certain number of requests per day per user, which even by having automated the collection, has severely limited us in the creation of our database. We therefore chose to focus on actors who played in an American film released after 2000, which still represents 38,007 actors.
+
+We observe a large disparity in the number of searches between the actors. For example, Tom Cruise is 1000 times more searched than 70% of the dataset. This large disparity led us to apply a log10(log10(Value) + 1) to calculate our score on Google searches, in order to obtain a better distribution, then bring this score between 0 and 10.
+
+<img src="assets/img/trends_score_distribution_by_gender.png" height=367px width=580px class="center"/>
+
+There are, however, a few important flaws in this score.
+
+The main limitation of this dataset is that some actor names are not their full name or may also be a nickname. And so their name may have other very common uses. For example, among those with the best score, we have "India", "Pink" or even "Dragon", and we understand that in this case the majority of Google searches are not focused on the actor, but rather towards the common meaning of these words.
+
+A second important limitation is that we can look for an actor for a reason unrelated to his profession as an actor. For example, Donald Trump is considered an actor because he has appeared in several films and series. However, his high score is much more linked to his former role as president than to his appearance in different films. So a high score is not always a sign of the success of an actor's career.
 
 -----------------------
 ## Combining our success scores
