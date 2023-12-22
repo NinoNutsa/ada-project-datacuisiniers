@@ -28,7 +28,7 @@ Join us on this exciting journey through data as we unravel the secrets behind a
 
 Character archetypes, as diverse and nuanced as the human experience itself, provide storytellers with a rich tapestry of personas that resonate universally. These archetypes encapsulate familiar traits, behaviors, and motivations that have stood the test of time, offering a framework for understanding the human psyche. When applied to the realm of film and performance, character archetypes become a fascinating lens through which to quantify the versatility of actors. An actor's ability to convincingly portray a range of archetypes—from the hero and the villain to the sage and the jester—reflects not only their talent but also their capacity to tap into the depth and complexity of human emotion.
 
-<img src="assets/img/Archetypes.jpg.webp" height=350px width=330px class="center"/>
+<img src="assets/img/Archetypes.jpg.webp" height=340px width=330px class="center"/>
 
 The exploration of character archetypes in the context of film personas draws inspiration from the work of scientists: David Bamman, Brendan O’Connor and Noah A. Smith , on developping computational methods to uncover character types from movie summaries [Learning Latent Personas of Film Characters](https://aclanthology.org/P13-1035.pdf). This work, defines personas as sets of mixtures over latent lexical classes. These classes capture stereotypical actions, attributes, and roles that characters embody in storytelling. The article introduces a novel dataset for text-driven film analysis and provides a benchmark testbed, marking a significant step toward understanding the intricacies of character representation in narratives. The study's insights have served as a foundation for for identifying persona clusters linked to each character, providing a method to quantify the diversity of roles portrayed by actors. The computational analysis of character archetypes contributes to a deeper comprehension of the versatile and dynamic nature of storytelling in the world of cinema.
 The figure below presents the distribution of the number of distinct personas embodied by actors within the examined dataset.
@@ -233,7 +233,7 @@ This raises questions about the nature of success and whether focusing on one ty
 ## Exploring correlations between success scores
 
 ### Regional Dynamics: Geographical Influences on Actor Success
-Developing precise metrics to assess an actor's success, we explore how these metrics vary across different regions. A key question emerges: Does choosing a specific region offer actors a strategic advantage in achieving success? This question prompts us to consider whether certain locations provide a more favorable path to accomplishment in the entertainment industry.
+After developing precise metrics to assess an actor's success, we explore how these metrics vary across different regions. A key question emerges: Does choosing a specific region offer actors a strategic advantage in achieving success? This question prompts us to consider whether certain locations provide a more favorable path to accomplishment in the entertainment industry.
 <style>
     button {
         background-color: grey;
@@ -263,11 +263,21 @@ Developing precise metrics to assess an actor's success, we explore how these me
     }
 </script>
 
+The United States stands out as the unequivocal epicenter for achieving success in the global film industry. This assertion is substantiated by the prolific and influential nature of Hollywood, an iconic district within Los Angeles, California, widely recognized as the entertainment capital of the world. Hollywood has been a powerhouse in shaping the film landscape, with its studios producing a significant majority of blockbuster films that have garnered international acclaim. Furthermore, the U.S. film industry boasts the highest box office revenues globally, underscoring its dominance in cinematic influence. The country's cultural and economic infrastructure, coupled with the extensive reach of its films, positions the United States as the preeminent hub for actors aspiring to attain global success. This concentration of industry resources, coupled with the widespread recognition of American cinema, cements the United States as a primary destination for actors seeking unparalleled opportunities and visibility on the world stage.
+
 ### Oscar Winner's Profile
 
-<img src="assets/img/time_oscar_winner.png" height=308px width=500px class="center"/>
-<iframe id="oscar_persona" src="assets/img/nb_persona_oscar.html" width="750px" height="530px" frameborder="0"></iframe>
-<img src="assets/img/regression_persona_oscar.png" height=308px width=500px class="center"/>
+In understanding what makes an actor successful, we turn our attention to Oscar winners. The Oscars represent the pinnacle of achievement in the film industry, and their experiences hold key insights. Therefore, it's essential to delve into the journeys of those who have received the prestigious Oscar. In this section, we explore the time it takes for actors to achieve this milestone and the impact of embodying different personas on their success. By simplifying our analysis, we aim to uncover patterns that contribute to the broader understanding of an actor's journey in the world of cinema.
+
+- The Oscar Journey: Temporal Insight
+Our initial analysis dissects the temporal aspects of an actor's journey to Oscar glory. On average, it takes an actor approximately 12 years to attain the prestigious accolade, underscoring the dedication and perseverance embedded in their quest. 
+Beyond mere recognition, we explore the overarching narrative of an actor's career span. The findings reveal an average career longevity of 30 years among Oscar winners, suggesting a sustained impact and enduring contributions to the cinematic landscape.
+<img src="assets/img/time_oscar_winner.png" height=308px width=700px class="center"/>
+
+- Versatility Unveiled: Personas and Oscars
+Going beyond temporal dimensions, we delve into the analyzing the versatility of oscar winners. Our regression analysis uncovers a positive relationship between an actor's versatility and their success on the grand stage of the Oscars. As actors embody a diverse array of personas throughout their careers, we observe a proportional increase in the number of Oscars received. While this increase ( regression coefficient: 0.1402) may seem numerically small, it signifies a meaningful relationship in the context of our analysis. Each additional persona portrayed by an actor throughout their career corresponds to a positive increment in the predicted number of Oscars obtained. Though the effect size might appear modest, it reinforces the idea that versatility, as reflected in the diversity of character portrayals, contributes incrementally to an actor's likelihood of achieving success on the grand stage of the Oscars.
+<iframe id="oscar_persona" src="assets/img/nb_persona_oscar.html" width="750px" height="500px" frameborder="0"></iframe>
+<img src="assets/img/regression_persona_oscar.png" height=408px width=500px class="center"/>
 
 ### How the career span impacts the overall scores ?
 
