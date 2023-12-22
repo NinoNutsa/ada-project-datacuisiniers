@@ -274,10 +274,10 @@ Our initial analysis dissects the temporal aspects of an actor's journey to Osca
 Beyond mere recognition, we explore the overarching narrative of an actor's career span. The findings reveal an average career longevity of 30 years among Oscar winners, suggesting a sustained impact and enduring contributions to the cinematic landscape.
 <img src="assets/img/time_oscar_winner.png" height=308px width=700px class="center"/>
 
-- Versatility Unveiled: Personas and Oscars
+- Versatility: Personas and Oscars
 Going beyond temporal dimensions, we delve into the analyzing the versatility of oscar winners. Our regression analysis uncovers a positive relationship between an actor's versatility and their success on the grand stage of the Oscars. As actors embody a diverse array of personas throughout their careers, we observe a proportional increase in the number of Oscars received. While this increase ( regression coefficient: 0.1402) may seem numerically small, it signifies a meaningful relationship in the context of our analysis. Each additional persona portrayed by an actor throughout their career corresponds to a positive increment in the predicted number of Oscars obtained. Though the effect size might appear modest, it reinforces the idea that versatility, as reflected in the diversity of character portrayals, contributes incrementally to an actor's likelihood of achieving success on the grand stage of the Oscars.
 <iframe id="oscar_persona" src="assets/img/nb_persona_oscar.html" width="750px" height="500px" frameborder="0"></iframe>
-<img src="assets/img/regression_persona_oscar.png" height=408px width=500px class="center"/>
+
 
 ### How the career span impacts the overall scores ?
 
